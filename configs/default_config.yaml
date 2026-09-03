@@ -1,0 +1,44 @@
+# CẤU HÌNH HỆ THỐNG ĐO KHOẢNG CÁCH XE (CONFIG)
+
+
+camera:
+  focal_length: 700.0          # Tiêu cự ảo ước tính của camera
+
+# Cấu hình Hành Lang Làn Đường Phối Cảnh (Đã thu hẹp gọn gàng vừa khít 1 làn xe)
+corridor:
+  top_y_ratio: 0.58            # Độ cao đường chân trời (58% từ trên xuống)
+  top_width_ratio: 0.14        # Bề rộng đỉnh hành lang ở xa (14% màn hình - hẹp và tập trung)
+  bot_width_ratio: 0.44        # Bề rộng đáy hành lang sát mũi xe (44% màn hình - vừa đúng 1 làn cao tốc)
+  center_x_ratio: 0.50         # Tâm tim đường chính giữa (50%)
+
+# Danh sách class COCO và chiều cao thực tế chuẩn (mét)
+vehicle_classes:
+  2:
+    name: "O to"
+    real_height_m: 1.5
+  3:
+    name: "Xe may"
+    real_height_m: 1.1
+  5:
+    name: "Xe buyt"
+    real_height_m: 3.0
+  7:
+    name: "Xe tai"
+    real_height_m: 2.8
+
+# Ngưỡng cảnh báo an toàn
+alert_thresholds:
+  danger_distance_m: 5.0       # Dưới 5m: Báo động nguy hiểm (Đỏ)
+  warning_distance_m: 10.0     # Dưới 10m: Chú ý giảm tốc (Cam)
+  tts_cooldown_sec: 2.5        # Thời gian nghỉ giữa 2 lần phát giọng nói (giây)
+  tts_enabled: true            # Bật/Tắt tính năng đọc giọng nói
+
+# Tinh chỉnh làm mượt dữ liệu (Smooth filter)
+smoothing:
+  window_size: 5               # Số khung hình liên tiếp dùng để tính trung bình trượt
+
+# Cấu hình mô hình AI YOLO
+inference:
+  model_path: "models/yolov8n.pt"
+  confidence_threshold: 0.35
+  img_size: 640

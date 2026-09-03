@@ -1,0 +1,13 @@
+# ==========================================
+# CẤU HÌNH DATASET GÁN NHÃN LÀN ĐƯỜNG & VẠCH SƠN (YOLO-SEG FORMAT)
+# ==========================================
+
+path: ../data/dataset          # Đường dẫn gốc tới thư mục dữ liệu
+train: images/train            # Thư mục ảnh huấn luyện
+val: images/val                # Thư mục ảnh kiểm thử
+
+# Danh sách các class nhận diện làn đường
+names:
+  0: "lan_duong_xe_chay"       # Vùng thảm làn đường xe đang chạy (Drivable Ego-Lane Polygon)
+  1: "vach_son_trang"          # Vạch kẻ đường màu trắng (White Lane Line)
+  2: "vach_son_vang"           # Vạch kẻ đường màu vàng (Yellow Lane Line)
