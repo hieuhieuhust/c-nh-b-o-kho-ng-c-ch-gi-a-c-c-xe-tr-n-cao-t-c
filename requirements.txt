@@ -1,0 +1,18 @@
+# Thư viện AI & Xử lý thị giác máy tính
+ultralytics>=8.0.0
+opencv-python>=4.7.0.72
+numpy>=1.23.0
+
+# Cấu hình & Giọng nói
+pyyaml>=6.0
+pyttsx3>=2.90
+
+# Công cụ tải dữ liệu video mẫu
+yt-dlp>=2024.0.0
+
+# Công cụ xuất mô hình TFLite / ONNX
+onnx>=1.14.0
+onnxruntime>=1.15.0
+
+# Kiểm thử (Testing)
+pytest>=7.0.0

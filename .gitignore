@@ -1,0 +1,28 @@
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Dữ liệu Video / Ảnh nặng (không đưa lên Git)
+data/raw/*
+!data/raw/.gitkeep
+data/output/*
+!data/output/.gitkeep
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Trọng số mô hình (Weights nặng)
+models/*.pt
+models/*.onnx
+models/*.tflite
+models/*.engine
+!models/.gitkeep
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
